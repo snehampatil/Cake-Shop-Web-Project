@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+</head>
+
+<!-- all details:: main image of cake : https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/raspberry-pink-velvet-cake-1574437052.jpg?crop=1xw:0.8333333333333334xh;center,top&resize=480:*
+logo :: https://previews.123rf.com/images/wahyufrida/wahyufrida1903/wahyufrida190302414/119834947-cake-logo-vector-ilustration-template.jpg -->
+
+<style>body {
+    background-image: url('https://cdn.wallpapersafari.com/24/26/kV095N.png');
+    background-size: cover;
+    font-family: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial", sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    margin: 0;
+  }
+  
+  h1{
+      font-family: "Sofia", sans-serif;
+  }
+
+  h2{
+      font-family: "Sofia", sans-serif;
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 10px;
+    text-align: center;
+    background-image:url('https://wallpapercave.com/wp/Uj5Oo3n.jpg');
+    background-size: cover;
+    color:black;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  .topnav {
+          overflow: hidden;
+          background-color: #333;
+        }
+        .topnav a {
+          float: left;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        .topnav a:active {
+          background-color: blue; 
+          /* nav bar color */
+          color: white;
+        }
+  </style>
+
+<body>
+    <meta content="width=device-width, initial-scale=1.0">
+    <div class="about-section">
+
+      <div class="topnav" style="font-family: 'Sofia', sans-serif;">
+        <a class="active" href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+      </div>
+
+        <h1>THE CAKE SHOP</h1>
+        <p>We make cakes with different flavours that are absolute delight to your taste</p>
+        <p>Estalished in 2020</p>
+        <button style="background-color: rgb(165, 200, 202); border: none; color: white;"><a href="contact.html">Visit us</a></button>
+      </div>
+      <p><button style="background-color: rgb(3, 5, 5); border: none; color: white;">Your Cart</button><button id="cart">Empty</button> </p>
+      <h2 style="text-align:center">Choose from various flavours</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="cake_final_images/o1.jpg" alt="Blue-berry Cheese cake" style="width:100%">
+            <div class="container">
+              <h2>dry fruits and nuts cake</h2>
+              <p class="title">2.5-kg</p>
+              <p>Rs.280</p>
+              <p><button class="button"><a href="sign_up.html" style="color: white;">Buy now</a></button></p>
+              Quantity:<input type="number" id="num1"/><br>
+              <button class="button" onclick="add();"> Add to Cart </button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="cake_final_images/o2.jpg" alt="." style="width:100%">
+            <div class="container">
+              <h2>Cherry and chocolate cake</h2>
+              <p class="title">1-kg</p>
+              <p>Rs.350</p>
+              <p><button class="button"><a href="sign_up.html" style="color: white;">Buy now</a></button></p>
+              Quantity:<input type="number" id="num2"/><br>
+              <button class="button" onclick="add();"> Add to Cart </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="cake_final_images/o3.jpg" alt="." style="width:100%">
+            <div class="container">
+              <h2>Fresh fruit cake</h2>
+              <p class="title">1-kg</p>
+              <p>Rs. 250</p>
+              <p><button class="button"><a href="sign_up.html" style="color: white;">Buy now</a></button></p>
+              Quantity:<input type="number" id="num3"/><br>
+              <button class="button" onclick="add();"> Add to Cart </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+              <img src="cake_final_images/o5.jpg" alt="." style="width:100%">
+              <div class="container">
+                <h2>Orange fruit cake</h2>
+                <p class="title">1-kg</p>
+                <p>Rs.290</p>
+                <p><button class="button"><a href="sign_up.html" style="color: white;">Buy now</a></button></p>
+              Quantity:<input type="number" id="num4"/><br>
+              <button class="button" onclick="add();"> Add to Cart </button>
+              </div>
+            </div>
+          </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="cake_final_images/o6.jpg" alt="." style="width:100%">
+          <div class="container">
+            <h2>Strawberry fruit cake</h2>
+            <p class="title">1/2-kg</p>
+            <p>Rs.320</p>
+            <p><button class="button"><a href="sign_up.html" style="color: white;">Buy now</a></button></p>
+              Quantity:<input type="number" id="num5"/><br>
+              <button class="button" onclick="add();"> Add to Cart </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="cake_final_images/o7.jpg" alt="." style="width:100%">
+          <div class="container">
+            <h2>Blue berry fruit cake</h2>
+            <p class="title">1.5-kg</p>
+            <p>Rs.600</p>
+            <p><button class="button"><a href="sign_up.html" style="color: white;">Buy now</a></button></p>
+              Quantity:<input type="number" id="num6"/><br>
+              <button class="button" onclick="add();"> Add to Cart </button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <button class="button"><a href="sign_up.html" style="color: white;">PLACE ORDER</a></button>
+
+</body>
+
+<script type="text/javascript">
+
+  var p=NaN;
+  
+  function add()
+  {
+    var c=0;
+    var a= document.getElementById('num1').value;
+    var b= document.getElementById('num2').value;
+    var d= document.getElementById('num3').value;
+    var e= document.getElementById('num4').value;
+    var f= document.getElementById('num5').value;
+    var g= document.getElementById('num6').value;
+  
+    var a= parseInt(a);
+    var b= parseInt(b);
+    var d= parseInt(d);
+    var e= parseInt(e);
+    var f= parseInt(f);
+    var g= parseInt(g);
+  
+  if (isNaN(a))
+  {
+    a=0;
+  }
+  if (isNaN(b))
+  {
+    b=0;
+  }
+  if (isNaN(e))
+  {
+    e=0;
+  }
+  if (isNaN(d))
+  {
+    d=0;
+  }
+  if (isNaN(f))
+  {
+    f=0;
+  }
+  if (isNaN(g))
+  {
+    g=0;
+  }
+  c=a+b+d+e+f+g;
+  document.getElementById("cart").innerHTML = c;
+  
+    alert("Your cart has "+c+" items");
+  }
+  
+  
+  
+  
+  
+  </script>
+</html>
